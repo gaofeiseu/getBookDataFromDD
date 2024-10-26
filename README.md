@@ -12,6 +12,16 @@ pip install -r requirements.txt
 ## 2.参数调整
 
 1. 调整`main.py`文件中数据库连接部分的配置内容，见db_config
+```python
+db_config = {
+    'host': 'xxxxxxxxxxxxxxxxxxxxxxx.mysql.rds.aliyuncs.com',  # 替换为你的数据库链接
+    'user': 'xxxxxxxxxxxxx',  # 替换为你的数据库用户名
+    'password': 'xxxxxxxxxxxxxxxxxxxxx',  # 替换为你的数据库密码
+    'db': 'xxxxxxxxxxxxxxx',  # 替换为你的数据库名
+    'charset': 'utf8mb4',
+    'cursorclass': pymysql.cursors.DictCursor,  # 返回字典类型的游标
+}
+```
 2. 调整需要遍历的ID范围
 ```python
 for product_id in range(29503785, 31502099):
